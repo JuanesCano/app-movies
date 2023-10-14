@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { Navigation } from "./src/navigation/Navigation";
 import { AppRegistry } from 'react-native';
+import { axios } from "axios";
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3/movie/550?api_key=";
 axios.defaults.params = {

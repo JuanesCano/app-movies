@@ -17,7 +17,7 @@ export const useMoviesDetails = (movie) => {
   const getMoreDetails = useCallback(async () => {
     try {
       setIsLoading(true);
-      const movieFull = await axioss.get(`/${movie.id}`);
+      const movieFull = await axios.get(`/${movie.id}`);
       const cast = await axios.get(`/${movie.id}/credits`);
 
       setMovieFull(movieFull.data);

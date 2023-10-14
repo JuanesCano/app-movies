@@ -15,6 +15,7 @@ import Movie from "../components/Movie";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import HorizontalSlider from "../components/HorizontalSlider";
 import { useMovies } from "../hooks/useMovies";
+import { StatusBar } from "expo-status-bar";
 
 const { width: windowWidth } = Dimensions.get("window");
 
@@ -32,6 +33,7 @@ export default function HomeScreen() {
   }
 
   return (
+    <StatusBar>
     <ScrollView>
       <View style={{ marginTop: top + 15 }}>
         <View style={{ height: 440 }}>
@@ -51,6 +53,7 @@ export default function HomeScreen() {
         <HorizontalSlider movies={peliculas.upComing} title="Up Coming" />
       </View>
     </ScrollView>
+    </StatusBar>
   );
 }
 
